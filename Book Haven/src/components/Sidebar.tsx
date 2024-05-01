@@ -1,6 +1,6 @@
 
 import Image from "next/image"
-import { IoAirplane, IoArrowRedoCircle, IoBrowsers, IoBrowsersOutline, IoLibrary, IoLogOut, IoTerminal } from "react-icons/io5"
+import { IoBrowsersOutline, IoLibrary, IoLogOut } from "react-icons/io5"
 import SideBarMenuItem from "./SideBarMenuItem"
 //import { GiDragonBalls } from "react-icons/gi"
 
@@ -9,6 +9,12 @@ const menuItems = [
     path: '/protected/dashboard/main',
     icon: <IoBrowsersOutline />,
     title: 'Dashboard',
+    subTitle: "Visualizacion"
+  },
+  {
+    path: '/protected/dashboard/pdffile/pdfAdd',
+    icon: <IoLibrary />,
+    title: 'AddBook',
     subTitle: "Visualizacion"
   },
   {

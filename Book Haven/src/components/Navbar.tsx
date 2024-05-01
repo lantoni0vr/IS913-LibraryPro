@@ -6,7 +6,7 @@ const Navbar = async () => {
     const session = await getServerSession(authOptions);
 
     return (
-        <nav className="flex justify-between items-center bg-gray-900 text-white px-24 py-3">
+        <nav className="flex justify-between items-center bg-gray-900 text-white px-24 py-3 overflow-y-hidden ">
             <ul className="text-4xl font-bold">
                 <li>
                     <Link href="/">📚</Link>
@@ -17,7 +17,7 @@ const Navbar = async () => {
                 {session && session.user?.email ? (
                     <>
                         <p>
-                            <b className="w-full bg-blue-800 text-white p-3 rounded-lg mt-2">Identificado como {session.user?.email}</b>
+                            <b className="w-full bg-gradient-to-r from-blue-800 to-purple-500 p-3 rounded-lg mt-2">Identificado como {session.user?.email}</b>
                         </p>
                     </>
                 ) : (

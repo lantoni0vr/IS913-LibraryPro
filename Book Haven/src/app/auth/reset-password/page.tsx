@@ -1,6 +1,6 @@
 import ChangePasswordForm from '@/app/components/ChangePasswordForm';
 import ResetPasswordForm from '@/app/components/ResetPasswordForm';
-import prisma from '@/app/lib/prisma';
+import prisma from '@/lib/prisma';
 import React from 'react';
 
 interface ResetPasswordPageProps {

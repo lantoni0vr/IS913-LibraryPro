@@ -1,6 +1,6 @@
 'use server';
 
-import prisma from '@/app/lib/prisma';
+import prisma from '@/lib/prisma';
 import crypto from 'crypto';
 import { sendEmail } from '../../../actions/emails/sendEmail';
 import { ResetPasswordEmailTemplate } from '@/app/email-templates/reset-password-email';
