@@ -33,7 +33,7 @@ const ChangePasswordForm = ({ resetPasswordToken }: ChangePasswordFormProps) => 
     }
 
     return (
-        <div className="flex flex-col justify-center items-center h-screen">
+        <div className="flex flex-col justify-center items-center h-screen bg-gradient-to-r from-blue-300 to-purple-200">
                 <h1 className=" text-slate-700 font-bold text-4xl mb-4">Reestablecer</h1>
                 <label htmlFor="password" className="text-slate-500 mb-2 block text-sm w-1/4">
                     Cambio de contraseña:

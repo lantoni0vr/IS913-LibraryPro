@@ -8,13 +8,13 @@ import React from 'react'
 const DashboardPage = async () => {
   const session = await getServerSession(authOptions)
   return (
-    <section className="h-[calc(100vh-7rem)] flex justify-center items-center text-3xl font-bold">
+    <section className="h-screen flex justify-center items-center text-3xl font-bold bg-gradient-to-r from-blue-300 to-purple-200">
       <ul className="flex gap-x-2">
 
         {session && session.user?.email ? (
           <>
             <p>
-              <b className="w-full text-slate-700 text-2xl p-3 rounded-lg mt-2">Bienvenido/a {session.user?.email}</b>
+              <b className="w-full text-slate-800 text-2xl p-3 rounded-lg mt-2">Bienvenido/a {session.user?.email}</b>
             </p>
           </>
         ) : (

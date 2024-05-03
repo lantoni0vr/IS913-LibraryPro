@@ -8,7 +8,7 @@ const Navbar = async () => {
     return (
         <nav className="flex justify-between items-center bg-gray-900 text-white px-24 py-3 overflow-y-hidden ">
             <ul className="text-4xl font-bold">
-                <li>
+                <li className="hover:bg-indigo-600">
                     <Link href="/">📚</Link>
                 </li>
             </ul>
@@ -22,10 +22,10 @@ const Navbar = async () => {
                     </>
                 ) : (
                     <>
-                        <li className="w-full bg-blue-500 text-white p-3 rounded-lg mt-2">
+                        <li className="w-full bg-blue-500 text-white p-3 rounded-lg mt-2 hover:bg-indigo-600">
                             <Link href='/auth/signin'>Iniciar</Link>
                         </li>
-                        <li className="w-full bg-blue-500 text-white p-3 rounded-lg mt-2">
+                        <li className="w-full bg-blue-500 text-white p-3 rounded-lg mt-2 hover:bg-indigo-600">
                             <Link href='/auth/register'>Registro</Link>
                         </li>
                     </>

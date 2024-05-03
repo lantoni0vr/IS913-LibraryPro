@@ -34,3 +34,10 @@ model pdfTable {
   pdf        String
   uploadedAt DateTime @default(now())
 }
+model Book {
+  id          Int      @id @default(autoincrement())
+  createdAt   DateTime @default(now())
+  name        String   @unique
+  genre       String
+  description String
+}

@@ -2,26 +2,33 @@
 import Image from "next/image"
 import { IoBrowsersOutline, IoLibrary, IoLogOut } from "react-icons/io5"
 import SideBarMenuItem from "./SideBarMenuItem"
+import { MdDashboard } from "react-icons/md";
 //import { GiDragonBalls } from "react-icons/gi"
 
 const menuItems = [
   {
     path: '/protected/dashboard/main',
-    icon: <IoBrowsersOutline />,
+    icon: <MdDashboard/>,
     title: 'Dashboard',
     subTitle: "Visualizacion"
   },
   {
     path: '/protected/dashboard/pdffile/pdfAdd',
     icon: <IoLibrary />,
-    title: 'AddBook',
-    subTitle: "Visualizacion"
+    title: 'Agregar PDF',
+    subTitle: "Nuevo"
+  },
+  {
+    path: '/protected/dashboard/addbook',
+    icon: <IoLibrary />,
+    title: 'Agregar Libro',
+    subTitle: "Nuevo"
   },
   {
     path: '/api/auth/signout',
     icon: <IoLogOut />,
-    title: 'Logout',
-    subTitle: "exit"
+    title: 'Cerrar Sesion',
+    subTitle: "Salir"
   },
 ]
 
@@ -41,22 +48,6 @@ export const Sidebar = () => {
             </h1>
             <p className="text-slate-500 text-sm">Library</p>
           </div>
-          {/* <div id="profile" className="px-6 py-10">
-            <p className="text-slate-500">Welcome back,</p>
-            <a href="#" className="inline-flex space-x-2 items-center">
-              <span>
-                <Image
-                  className="rounded-full w-8 h-8"
-                  src="https://png.pngtree.com/png-clipart/20201223/ourlarge/pngtree-personnel-icon-vector-material-png-image_2598684.jpg"
-                  alt="Profile"
-                  width={50}
-                  height={50} />
-              </span>
-              <span className="text-sm md:text-base font-bold">
-                Antonio Vasquez
-              </span>
-            </a>
-          </div> */}
           <div id="nav" className="w-full px-6">
             {
               menuItems.map((item) => (

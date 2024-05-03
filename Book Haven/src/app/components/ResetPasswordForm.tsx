@@ -18,7 +18,7 @@ const ResetPasswordForm = () => {
     }
 
     return (
-        <div className="flex flex-col justify-center items-center h-screen">
+        <div className="flex flex-col justify-center items-center h-screen bg-gradient-to-r from-blue-300 to-purple-200">
                 <h1 className=" text-slate-700 font-bold text-4xl mb-4 w-1/4">Reestablecer</h1>
                 <label htmlFor="username" className="text-slate-500 mb-2 block text-sm w-1/4">
                     Ingresa correo para reestablecer contrasena:
@@ -30,7 +30,7 @@ const ResetPasswordForm = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                 />
-                <button onClick={handleSubmit} className="w-1/4 bg-blue-500 text-white p-3 rounded-lg mt-2">
+                <button onClick={handleSubmit} className="w-1/4 bg-blue-500 text-white p-3 rounded-lg mt-2 hover:bg-indigo-500">
                     Enviar correo
                 </button>
                 <Link

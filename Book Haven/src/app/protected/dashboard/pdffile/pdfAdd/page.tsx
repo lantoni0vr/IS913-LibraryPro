@@ -214,7 +214,7 @@ export default function Home() {
     }
   }
   return (
-    <main className="flex flex-row justify-evenly items-center py-16 min-h-screen">
+    <main className="flex flex-row justify-evenly items-center py-16 min-h-screen bg-gradient-to-r from-blue-200 to-purple-100 ">
       <Dialog
         open={open}
         TransitionComponent={Transition}
@@ -222,7 +222,7 @@ export default function Home() {
         onClose={handleClose}
         aria-describedby="alert-dialog-slide-description"
       >
-        <DialogTitle>{"Delete PFD file?"}</DialogTitle>
+        <DialogTitle>{"Eliminar archivo PDF"}</DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-slide-description">
           ¿Estas seguros que quieres eliminar <span className="font-bold underline">{deleteFileName}</span> de tu lista de libros?
@@ -233,7 +233,7 @@ export default function Home() {
           <Button onClick={() => setOpen(false)}>No</Button>
         </DialogActions>
       </Dialog>
-      <div className="h-80vh w-700 flex flex-col justify-center items-center p-12 rounded-lg border-2 border-dashed border-lightgray shadow-lg bg-gradient-to-r from-gray-300 to-purple-100">
+      <div className="h-80vh w-700 flex flex-col justify-center items-center p-12 rounded-lg border-2 border-dashed border-lightgray shadow-lg bg-gradient-to-r from-blue-300 to-purple-200">
         <h1 className="text-gray-500 text-center text-3xl">Cargar tu libro en PDF</h1>
         <br />
         <h3 className="text-gray-500 text-center font-bold">Selecciona el archivo</h3>
@@ -308,7 +308,7 @@ export default function Home() {
           <InputBase
           className="text-gray-500 text-center font-bold"
             sx={{ ml: 1, flex: 1 }}
-            placeholder="Bucar archivo PDF"
+            placeholder="Bucar libro"
             inputProps={{ 'aria-label': 'search google maps' }}
             onChange={searchPdf}
           />

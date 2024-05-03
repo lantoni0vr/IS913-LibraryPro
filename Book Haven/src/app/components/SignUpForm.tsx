@@ -41,27 +41,27 @@ const SignUpForm = () => {
     
 
     return (
-        <div className="flex flex-col justify-center items-center h-screen">
+        <div className="flex flex-col justify-center items-center h-screen bg-gradient-to-r from-blue-300 to-purple-200">
                 <h1 className=" text-slate-700 font-bold text-4xl mb-4 w-1/4">Registro</h1>
-                <label htmlFor="email" className="text-slate-500 mb-2 block text-sm w-1/4">
+                <label htmlFor="email" className="text-slate-600 mb-2 block text-sm w-1/4">
                     Correo:
                 </label>
                 <input className="p-3 rounded block mb-2 bg-slate-900 text-slate-300 w-1/4"
                     type='text' placeholder='correo' value={email} onChange={(e) => setEmail(e.target.value)}/>
 
-                <label htmlFor="username" className="text-slate-500 mb-2 block text-sm w-1/4">
+                <label htmlFor="username" className="text-slate-600 mb-2 block text-sm w-1/4">
                     Usuario:
                 </label>
                 <input className="p-3 rounded block mb-2 bg-slate-900 text-slate-300 w-1/4"
                     type='text' placeholder='usuario' value={username} onChange={(e) => setUsername(e.target.value)} required />
 
-                <label htmlFor="password" className="text-slate-500 mb-2 block text-sm w-1/4">
+                <label htmlFor="password" className="text-slate-600 mb-2 block text-sm w-1/4">
                     Contraseña:
                 </label>
                 <input className="p-3 rounded block mb-2 bg-slate-900 text-slate-300 w-1/4"
                     type='password' placeholder='*******' value={password} onChange={(e) => setPassword(e.target.value)} required />
 
-                <label htmlFor="confirmPassword" className="text-slate-500 mb-2 block text-sm w-1/4">
+                <label htmlFor="confirmPassword" className="text-slate-600 mb-2 block text-sm w-1/4">
                     Confirmar Contraseña:
                 </label>
                 <input className="p-3 rounded block mb-2 bg-slate-900 text-slate-300 w-1/4"

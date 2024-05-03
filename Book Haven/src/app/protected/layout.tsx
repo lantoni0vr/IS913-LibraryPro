@@ -12,7 +12,7 @@ const ProtectedLayout = async ({children}: ProtectedLayoutProps) => {
 
     if(!session || !session.user?.email) {
         return (
-            <div className="flex flex-col h-screen text-slate-700 text-2xl mb-4 p-6">
+            <div className="flex flex-col h-screen text-slate-700 text-2xl mb-4 p-6 bg-gradient-to-r from-blue-300 to-purple-200">
                 Ruta protegida, debe iniciar sesión para poder acceder!!
             </div>
         )
