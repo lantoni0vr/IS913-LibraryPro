@@ -33,7 +33,7 @@ const VerifyEmailPage = async ({ searchParams }: VerifyEmailPageProps) => {
         return (
             <div>
                 <h1 className="flex flex-col h-screen text-slate-700 text-2xl mb-4 p-6">
-                    El correo <span>{user.email}</span> ha sido verificado
+                   <span>El correo <span className='font-semibold'>{user.email}</span> ha sido verificado</span> 
                 </h1>
             </div>
         )

@@ -20,7 +20,7 @@ export default async function Home() {
               <div className="flex-grow sm:text-left text-center mt-2 sm:mt-0">
                 <h2 className="text-gray-900 text-lg title-font font-medium">
                   {book.name} ·{" "}
-                  <span className="text-green-600 ">{book.genre}</span>
+                  <span className="text-green-800 ">{book.genre}</span>
                 </h2>
                 <p className="leading-relaxed text-base">{book.description}</p>
               </div>

@@ -40,7 +40,7 @@ const SignInForm = () => {
                 setMessage('Este correo no está registrado')
                 return
             }
-            
+
 
         } catch (err) {
             console.log(err);
@@ -59,30 +59,32 @@ const SignInForm = () => {
     }, [status]);
 
     return (
-        <div className="flex flex-col justify-center items-center min-h-screen bg-gradient-to-r from-blue-300 to-purple-200">
-            <h1 className=" text-slate-700 font-bold text-4xl mb-4 w-1/4">Inicio de Sesión</h1>
-            <label htmlFor="email" className="text-slate-600 mb-2 block text-sm w-1/4">
-                Correo:
-            </label>
-            <input className="p-3 rounded block mb-2 bg-slate-900 text-slate-300 w-1/4" type='text' placeholder='Correo' value={email} onChange={(e) => setEmail(e.target.value)} />
-            <label htmlFor="password" className="text-slate-600 mb-2 block text-sm w-1/4">
-                Contraseña:
-            </label>
-            <input className="p-3 rounded block mb-2 bg-slate-900 text-slate-300 w-1/4" type='password' placeholder='*******' value={password} onChange={(e) => setPassword(e.target.value)} />
+        <div className="flex flex-col justify-center items-center min-h-screen bg-gradient-to-r from-blue-200 to-purple-100">
+            <div className="bg-white rounded-lg p-8 flex flex-col max-w-auto mx-auto mt-10 md:mt-0 rounde-lg border-2 border-dashed border-lightgray shadow-lg bg-gradient-to-r from-blue-300 to-purple-300">
+                <h1 className=" text-slate-700 font-bold text-4xl mb-4">Inicio de Sesión</h1>
+                <label htmlFor="email" className="text-slate-600 mb-2 block text-sm ">
+                    Correo:
+                </label>
+                <input className="p-3 rounded block mb-2 bg-slate-900 text-slate-300 w-auto" type='text' placeholder='Correo' value={email} onChange={(e) => setEmail(e.target.value)} />
+                <label htmlFor="password" className="text-slate-600 mb-2 block text-sm w-auto">
+                    Contraseña:
+                </label>
+                <input className="p-3 rounded block mb-2 bg-slate-900 text-slate-300 w-auto" type='password' placeholder='*******' value={password} onChange={(e) => setPassword(e.target.value)} />
 
-            <button onClick={handleSubmit} className="w-1/4 bg-blue-500 text-white p-3 rounded-lg mt-2 hover:bg-indigo-500">
-                Iniciar Sesión
-            </button>
-            <Link
-                href="/auth/reset-password"
-                className="text-sm text-neutral-700/80 flex items-center w-1/4 p-3"
-            >
-                <CaretRightIcon />
-                <span>¿Olvidaste tu contaseña?</span>
-            </Link>
+                <button onClick={handleSubmit} className="bg-blue-500 text-white p-3 rounded-lg mt-2 hover:bg-indigo-500">
+                    Iniciar Sesión
+                </button>
+                <Link
+                    href="/auth/reset-password"
+                    className="text-sm text-neutral-700/80 flex items-center w-auto p-3"
+                >
+                    <CaretRightIcon />
+                    <span>¿Olvidaste tu contaseña?</span>
+                </Link>
 
 
-            <p>{message}</p>
+                <p className='items-center justify-center flex'>{message}</p>
+            </div>
         </div>
     );
 };
